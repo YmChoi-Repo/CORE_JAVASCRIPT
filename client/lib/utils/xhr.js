@@ -12,7 +12,7 @@
 
 // xhrData 함수 만들기 method, url 
 
-function xhrData({
+export function xhrData({
   url = '',
   method = 'GET',
   body = null,
@@ -51,6 +51,8 @@ function xhrData({
       onFail('통신 실패')
     }
   })
+
+
   // 서버에 요청
   xhr.send(JSON.stringify(body));
 }
